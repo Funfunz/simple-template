@@ -28,7 +28,7 @@
   "homepage": "https://github.com/JWebCoder/funfunz-template#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "funfunz": "file:../funfunzmc",
+    "funfunz": "^0.5.5",
     "typescript": "^4.0.5"
   },
   "devDependencies": {
