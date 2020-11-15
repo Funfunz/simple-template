@@ -1,0 +1,38 @@
+{
+  "name": "funfunz-template",
+  "version": "0.0.1",
+  "description": "This is a template backend for the Funfunz middleware",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --coverage --forceExit",
+    "lint": "eslint src",
+    "dev": "NODE_ENV=development ts-node ./src/index.ts",
+    "clean": "rm -rf lib && mkdir lib",
+    "build": "npm run lint && npm run clean && npm run build:js",
+    "build:js": "tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWebCoder/funfunz-template.git"
+  },
+  "keywords": [
+    "funfunz",
+    "template"
+  ],
+  "author": "João Moura <joao87moura@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JWebCoder/funfunz-template/issues"
+  },
+  "homepage": "https://github.com/JWebCoder/funfunz-template#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "funfunz": "file:../funfunzmc",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "ts-node": "^9.0.0"
+  }
+}
